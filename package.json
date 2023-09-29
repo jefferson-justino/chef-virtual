@@ -15,5 +15,12 @@
     "mysql2": "^3.6.1",
     "pg": "^8.11.3",
     "sequelize": "^6.33.0"
+  },
+  "devDependencies": {
+    "npm": "^9.8.1"
+  },
+  "engines": {
+    "node": ">=14"
   }
+
 }
