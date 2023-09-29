@@ -1,0 +1,24 @@
+para navegação local utilizar informações do seu próprio servior(sua máquina)
+exemplo:
+
+adicionar no arquivo ''database.js''
+module.exports={
+ dialect:'mysql',
+ host: 'localhost',
+database:  'teste',
+ username: 'root',
+ password: 'root'
+ }
+ logo em seguida adicionar dentro  do arquivo ''sequelize.js'' as seguintes linhas de código
+
+ const configDatabase = require('./database') aqui ele importa o script anterior e instancia dentro de uma variável
+
+const sequelize = new Sequelize(configDatabase) aqui ele cria a conexão com o banco de dados local.
+
+
+para utilizar em nuvem tem outros passos
+
+1- criar um arquivo chamado ''.env'' (arquivo onde vai conter as informações de chaves do banco);
+2- ir no banco em nuvem e pegar o link do banco;
+3- dentro do arquivo .env adicionar '' DATABASE_URL = *aqui você coloca o link do banco de dados* '' com isso, seu banco vai ter mais segurança em relação as informações contidas em nuvem.
+3- criar um arquivo chamado ''.gitignore'' e nele apenas digite ''.env'', com isso, sempre que o código for compartilhado no github, o arquivo .env nunca será exibido com as informações sensível do seu banco. e sempre que você baixar, vai ter que repetir este processo.
