@@ -10,7 +10,8 @@ dentro do terminal:
 - instalar mysql2;
 - instalar sequelize;
 - instalar express;
-- instalar cors.
+- instalar cors;
+- instalar nodemon.
 
 para navegação local utilizar informações do seu próprio servior(sua máquina)
 exemplo:
